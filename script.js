@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // HEADER & PERFIL
             'title': 'Suporte ao Cliente | Call Center | CRM | Assistente Virtual',
             'profile.title': 'Perfil',
-            'profile.text1': 'Profissional de Suporte ao Cliente e Call Center com experiência em ambientes remotos, gestão de CRM, acompanhamento de leads e desenvolvimento de relacionamento com clientes. Sólida formação em ferramentas digitais e processos administrativos.',
-            'profile.text2': 'Totalmente equipado para trabalho remoto com conexão de internet estável, computador pessoal e configuração profissional de home office.',
+            'profile.text1': 'Profissional de Suporte ao Cliente e Call Center com experiência em ambientes remotos, gestão de CRM, acompanhamento de leads e desenvolvimento de relacionamento com clientes. Sólida formação em ferramentas digitais e processos administrativos.',            'profile.text2': 'Totalmente equipado para trabalho remoto com conexão de internet estável, computador pessoal e configuração profissional de home office.',
             'profile.available': 'Disponível para trabalho remoto • Início imediato',
 
             // EXPERIÊNCIA
@@ -72,8 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'title': 'Customer Support | Call Center | CRM | Virtual Assistant',
             'profile.title': 'Profile',
             'profile.text1': 'Customer Support and Call Center professional with experience in remote environments, CRM management, lead follow-up, and customer relationship development. Strong background in digital tools and administrative processes.',
-            'profile.text2': 'Fully equipped for remote work with stable internet connection, personal computer, and professional home office setup.',
-            'profile.available': 'Available for remote work • Immediate start',
+            'profile.text1': 'Customer Support and Call Center professional with experience in remote environments, CRM management, lead follow-up, and customer relationship development. Strong background in digital tools and administrative processes.',            
 
             // EXPERIÊNCIA
             'experience.title': 'Professional Experience',
