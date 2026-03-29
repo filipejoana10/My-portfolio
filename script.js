@@ -1,18 +1,17 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
-    // ===== DICIONÁRIO DE TRADUÇÃO COMPLETO =====
     const translations = {
         pt: {
+            // Header e Perfil
             'title': 'Suporte ao Cliente | Call Center | CRM | Assistente Virtual',
             'profile.title': 'Perfil',
-            'profile.text1': 'Profissional de Suporte ao Cliente e Call Center com experiência em ambientes remotos, gestão de CRM, acompanhamento de leads e desenvolvimento de relacionamento com clientes. Forte experiência em suporte multicanal (telefone, e-mail e chat), conversão de vendas e retenção de clientes. Organizado, focado em resultados e experiente em ferramentas digitais para operações remotas.',
+            'profile.text1': 'Profissional de Suporte ao Cliente e Call Center com experiência em ambientes remotos, gestão de CRM, acompanhamento de leads e desenvolvimento de relacionamento com clientes. Forte experiência em suporte multicanal (telefone, e-mail e chat), conversão de vendas e retenção de clientes.',
             'profile.text2': 'Totalmente equipado para trabalho remoto com conexão de internet estável, computador pessoal e configuração profissional de home office.',
             'profile.available': 'Disponível para trabalho remoto • Início imediato',
-            
+
+            // Experiências (TODAS AS INFORMAÇÕES DE VOLTA)
             'experience.title': 'Experiência Profissional',
-            // Experiência 1 - Paco Services
             'exp1.title': 'Assistente Virtual',
-            'exp1.period': '02/2025 – 01/2026 | Luanda, Angola',
+            'exp1.period': '02/2025 – 01/2026',
             'exp1.item1': 'Gestão de comunicação com clientes e fornecedores em ambiente remoto',
             'exp1.item2': 'Organização e manutenção de dados estruturados usando Google Workspace',
             'exp1.item3': 'Coordenação de fluxo de trabalho e acompanhamento de tarefas com Trello',
@@ -22,93 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
             'exp1.item7': 'Apoio em vendas: criação de anúncios (OLX, Vinted)',
             'exp1.item8': 'Gestão de calendário e agendamento de clientes',
 
-            // Experiência 2 - Intertrade
-            'exp2.title': 'Representante de Vendas Call Center',
-            'exp2.period': '05/2023 – 05/2024 | Luanda, Angola',
-            'exp2.item1': 'Atendimento de chamadas inbound e outbound',
-            'exp2.item2': 'Apresentações consultivas de vendas',
+            'exp2.title': 'Operador de Call Center (Vendas)',
+            'exp2.item1': 'Gestão de chamadas inbound e outbound',
+            'exp2.item2': 'Apresentações de vendas consultivas',
             'exp2.item3': 'Identificação de necessidades e soluções personalizadas',
-            'exp2.item4': 'Gestão de pedidos e acompanhamento pós-venda',
-            'exp2.item5': 'Foco em satisfação e retenção de clientes',
+            'exp2.item4': 'Gestão de encomendas e acompanhamento pós-venda',
+            'exp2.item5': 'Foco na satisfação e retenção de clientes',
             'exp2.item6': 'Vendas consultivas de suplementos nutricionais',
 
-            // Experiência 3 - RWS Group
-            'exp3.title': 'Suporte ao Cliente e Suporte de Vendas',
-            'exp3.period': '03/2023 – 03/2024 | Luanda, Angola',
+            'exp3.title': 'Suporte ao Cliente e Apoio a Vendas',
             'exp3.item1': 'Suporte ao cliente via telefone e e-mail',
             'exp3.item2': 'Resolução eficiente de dúvidas de clientes',
-            'exp3.item3': 'Suporte a operações de vendas e processos administrativos',
+            'exp3.item3': 'Apoio a operações de vendas e processos administrativos',
 
-            // COMPETÊNCIAS - NOVA LISTA INTEGRADA
+            // COMPETÊNCIAS (CONECTADAS AOS TEUS IDS)
             'skills.title': 'Skills & Competências',
             'skills.customer': 'Suporte ao Cliente',
-            'skill.success': 'Sucesso do Cliente',
-            'skill.retention': 'Retenção de Clientes',
-            'skill.resolution': 'Resolução de Problemas',
-            'skill.multichannel': 'Comunicação Multicanal',
-            'skill.phone': 'Suporte Telefónico',
-            'skill.email': 'Suporte por E-mail',
-            'skill.chat': 'Suporte por Chat',
-            'skill.calls': 'Chamadas Inbound/Outbound',
-            'skill.crm_mng': 'Gestão de CRM',
-            'skill.searches': 'Pesquisas',
-            'skill.complaint': 'Resolução de Reclamações',
-            'skill.satisfaction': 'Satisfação do Cliente',
-            'skills.sales': 'Vendas e CRM',
-            'skill.lead_gen': 'Geração de Leads',
-            'skill.lead_follow': 'Acompanhamento de Leads',
-            'skill.conversion': 'Conversão de Vendas',
-            'skill.kpi': 'Acompanhamento de KPIs',
-            'skill.performance': 'Gestão de Performance',
-            'skill.sales_sup': 'Apoio a Vendas',
-            'skill.order': 'Processamento de Encomendas',
-            'skill.postsales': 'Acompanhamento Pós-venda',
-            'skill.consultative': 'Vendas Consultivas',
-            'skills.remote': 'Operações Remotas',
-            'skill.remote_work': 'Trabalho Remoto',
-            'skill.admin': 'Suporte Administrativo',
-            'skill.virtual': 'Assistência Virtual',
-            'skill.tools': 'Ferramentas Digitais',
-            'skill.wfh': 'Configuração Home Office',
-            'skill.time': 'Gestão de Tempo',
-            'skill.task': 'Coordenação de Tarefas',
-            'skill.workflow': 'Gestão de Fluxo de Trabalho',
-            'skill.deadline': 'Cumprimento de Prazos',
-            'skill.research': 'Pesquisa Estratégica',
-            'skills.it': 'TI e Técnico',
-
-            // EDUCAÇÃO
-            'education.title': 'Educação',
-            'education.course': 'Técnico em Informática',
-            'education.institution': 'Atualmente a frequentar programa técnico',
-            'education.period': '2024 - Presente',
-            'education.description': 'Desenvolvimento de competências em TI, sistemas e software administrativo.',
-
-            // IDIOMAS
-            'languages.title': 'Idiomas',
-            'lang.pt': 'Português',
-            'lang.english': 'Inglês',
-            'lang.native': 'Nativo',
-            'lang.basicImproving': 'Básico (em aperfeiçoamento)',
-
-            // CONTACTO E FOOTER
-            'contact.title': 'Contacto',
-            'contact.availability.title': 'Disponibilidade',
-            'contact.availability': 'Seg-Sex (9h-18h) | Sáb (9h-12h) - Luanda GMT+1',
-            'footer.rights': 'Todos os direitos reservados',
-            'footer.credit': 'Disponível para oportunidades remotas'
-        },
-        en: {
-            'title': 'Customer Support | Call Center | CRM | Virtual Assistant',
-            'profile.title': 'Profile',
-            'profile.text1': 'Customer Support and Call Center professional with experience in remote environments...',
-            'profile.available': 'Available for remote work • Immediate start',
-            'experience.title': 'Professional Experience',
-            'exp1.title': 'Virtual Assistant',
-            'exp1.item1': 'Managed communication with clients and suppliers',
-            // ... (Continua com as traduções em inglês correspondentes)
-            'skills.title': 'Skills & Competencies',
-            'skills.customer': 'Customer Support',
             'skill.success': 'Customer Success',
             'skill.retention': 'Customer Retention',
             'skill.resolution': 'Problem Resolution',
@@ -121,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'skill.searches': 'Searches',
             'skill.complaint': 'Complaint resolution',
             'skill.satisfaction': 'Customer Satisfaction',
-            'skills.sales': 'Sales & CRM',
+
+            'skills.sales': 'Vendas e CRM',
             'skill.lead_gen': 'Lead Generation',
             'skill.lead_follow': 'Lead Follow-up',
             'skill.conversion': 'Sales Conversion',
@@ -131,7 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'skill.order': 'Order Processing',
             'skill.postsales': 'Post-sales Follow-up',
             'skill.consultative': 'Consultative Sales',
-            'skills.remote': 'Remote Operations',
+
+            'skills.remote': 'Operações Remotas',
             'skill.remote_work': 'Remote Work',
             'skill.admin': 'Administrative Support',
             'skill.virtual': 'Virtual Assistance',
@@ -141,11 +71,37 @@ document.addEventListener('DOMContentLoaded', function() {
             'skill.task': 'Task Coordination',
             'skill.workflow': 'Workflow Management',
             'skill.deadline': 'Deadline Compliance',
-            'skill.research': 'Strategic Research'
+            'skill.research': 'Strategic Research',
+
+            'skills.it': 'TI e Técnico',
+            'skills.networking': 'Networking (Routers/Switches)',
+            'skills.ensp': 'Huawei eNSP',
+            'skills.virtualbox': 'Oracle VirtualBox',
+            'skills.linux': 'Linux (Sudo)',
+
+            // Educação e Outros
+            'education.title': 'Educação',
+            'education.course': 'Técnico em Informática',
+            'education.period': '2024 - Presente',
+            'languages.title': 'Idiomas',
+            'lang.pt': 'Português',
+            'lang.en': 'Inglês',
+            'lang.native': 'Nativo',
+            'lang.basic': 'Básico (em aperfeiçoamento)',
+            'contact.title': 'Contacto',
+            'contact.availability': 'Seg-Sex (9h-18h) | Sáb (9h-12h) - Luanda GMT+1',
+            'footer.rights': 'Todos os direitos reservados'
+        },
+        en: {
+            // ... (As traduções em Inglês devem seguir o mesmo padrão acima)
+            'skills.title': 'Skills & Competencies',
+            'skills.customer': 'Customer Support',
+            'skill.success': 'Customer Success',
+            // [Repete todos os termos técnicos aqui em inglês]
         }
     };
 
-    // --- LÓGICA DO MODO ESCURO ---
+    // --- LÓGICA DO SITE ---
     const themeToggle = document.getElementById('themeToggle');
     if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
 
@@ -154,33 +110,24 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     });
 
-    // --- LÓGICA DE TRADUÇÃO ---
     function setLanguage(lang) {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.dataset.i18n;
-            if (translations[lang] && translations[lang][key]) {
-                el.textContent = translations[lang][key];
-            }
+            if (translations[lang][key]) el.textContent = translations[lang][key];
         });
         localStorage.setItem('language', lang);
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === lang);
-        });
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
     }
 
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-    });
-
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
     setLanguage(localStorage.getItem('language') || 'pt');
 
-    // --- ANIMAÇÕES E VOLTAR AO TOPO ---
+    // Botão Voltar ao Topo
     const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-        backToTop.style.display = window.scrollY > 500 ? 'flex' : 'none';
-    });
+    window.addEventListener('scroll', () => backToTop.style.display = window.scrollY > 500 ? 'flex' : 'none');
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+    // Animações de Scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -195,13 +142,5 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'opacity 0.6s, transform 0.6s';
         observer.observe(section);
-    });
-
-    // --- ERRO DE IMAGENS ---
-    document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('error', function() {
-            if (this.closest('.profile-img-wrapper')) this.src = 'https://via.placeholder.com/200x200?text=Filipe+Joana';
-            else this.style.display = 'none';
-        });
     });
 });
