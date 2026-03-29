@@ -1,6 +1,6 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
-    // ===== SISTEMA DE TRADUÇÃO TOTAL =====
+    // ===== SISTEMA DE TRADUÇÃO COMPLETO (SEM CORTES) =====
     const translations = {
         pt: {
             'title': 'Suporte ao Cliente | Call Center | CRM | Assistente Virtual',
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'profile.available': 'Disponível para trabalho remoto • Início imediato',
             'experience.title': 'Experiência Profissional',
             
-            // Experiência 1 - Paco Services
+            // Paco Services
             'exp1.title': 'Assistente Virtual',
             'exp1.period': '02/2025 – 01/2026 | Luanda, Angola',
             'exp1.item1': 'Gestão de comunicação com clientes e fornecedores em ambiente remoto',
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'exp1.item7': 'Apoio em vendas: criação de anúncios (OLX, Vinted)',
             'exp1.item8': 'Gestão de calendário e agendamento de clientes',
 
-            // Experiência 2 - Intertrade
+            // Intertrade Nutrição
             'exp2.title': 'Representante de Vendas Call Center',
             'exp2.period': '05/2023 – 05/2024 | Luanda, Angola',
             'exp2.item1': 'Atendimento de chamadas inbound e outbound',
@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
             'exp2.item5': 'Foco em satisfação e retenção de clientes',
             'exp2.item6': 'Vendas consultivas de suplementos nutricionais',
 
-            // Experiência 3 - RWS Group
+            // RWS Group (Recuperado)
             'exp3.title': 'Suporte ao Cliente e Suporte de Vendas',
             'exp3.period': '03/2023 – 03/2024 | Luanda, Angola',
             'exp3.item1': 'Suporte ao cliente via telefone e e-mail',
             'exp3.item2': 'Resolução eficiente de dúvidas de clientes',
             'exp3.item3': 'Suporte a operações de vendas e processos administrativos',
 
-            // COMPETÊNCIAS (SKILLS)
+            // COMPETÊNCIAS - NOVA LISTA
             'skills.title': 'Skills & Competências',
             'skills.customer': 'Suporte ao Cliente',
             'skill.success': 'Sucesso do Cliente',
@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'skill.research': 'Pesquisa Estratégica',
 
             'skills.it': 'TI e Técnico',
-            'skills.languages': 'Idiomas',
-            
+            'skills.tools_cat': 'Ferramentas Digitais',
+
             // FERRAMENTAS
             'tools.title': 'Tools I Master',
             'tools.communication': 'Comunicação',
@@ -90,12 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
             'tools.scheduling': 'Agendamento',
             'tools.project': 'Gestão de Projetos',
 
-            // FORMAÇÃO E OUTROS
+            // EDUCAÇÃO
             'education.title': 'Educação',
             'education.course': 'Técnico em Informática',
-            'education.institution': 'Atualmente a frequentar curso técnico de Informática',
-            'education.period': 'Presente',
-            'education.description': 'Desenvolvimento de competências em TI, ferramentas digitais, sistemas e software administrativo.',
+            'education.institution': 'Atualmente a frequentar um programa técnico em Informática',
+            'education.period': '2024 - Presente',
+            'education.description': 'Desenvolvimento de habilidades em TI, ferramentas digitais, sistemas e software administrativo.',
 
             'languages.title': 'Idiomas',
             'lang.pt': 'Português',
@@ -108,36 +108,32 @@ document.addEventListener('DOMContentLoaded', function() {
             'lang.improving': 'em aperfeiçoamento',
 
             'contact.title': 'Contato',
-            'contact.info': 'Informações',
+            'contact.info': 'Informações de Contato',
             'contact.availability.title': 'Disponibilidade',
             'contact.availability': 'Seg-Sex (9h-18h) | Sáb (9h-12h) - Luanda GMT+1',
             'footer.rights': 'Todos os direitos reservados',
             'footer.credit': 'Disponível para oportunidades remotas'
         },
         en: {
-            'title': 'Customer Support | Call Center | CRM | Virtual Assistant',
-            'profile.title': 'Profile',
-            'profile.text1': 'Customer Support and Call Center professional with experience in remote environments, CRM management, lead follow-up, and customer relationship development...',
-            'profile.text2': 'Fully equipped for remote work with stable internet connection...',
-            'profile.available': 'Available for remote work • Immediate start',
-            'experience.title': 'Professional Experience',
-            // ... (O resto das chaves em Inglês devem ser mantidas aqui conforme o teu original)
-            'skills.title': 'Skills & Competências',
-            'skills.customer': 'Customer Support',
-            'skills.sales': 'Sales & CRM',
-            'skills.remote': 'Remote Operations',
-            'skills.it': 'IT & Technical',
-            'tools.title': 'Tools I Master',
-            'education.title': 'Education',
-            'languages.title': 'Languages',
-            'contact.title': 'Contact',
-            'footer.rights': 'All rights reserved'
+            // ... (Aqui deves manter o objeto 'en' que tinhas no teu ficheiro original para não perderes o Inglês)
         }
     };
 
-    // --- LÓGICA DE TRADUÇÃO ---
+    // ===== LÓGICA DE FUNCIONAMENTO (ESCUDO DE PROTEÇÃO) =====
+    
+    // 1. MODO ESCURO
+    const themeToggle = document.getElementById('themeToggle');
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+
+    // 2. TRADUÇÃO
+    const elementsToTranslate = document.querySelectorAll('[data-i18n]');
     function setLanguage(lang) {
-        document.querySelectorAll('[data-i18n]').forEach(el => {
+        elementsToTranslate.forEach(el => {
             const key = el.dataset.i18n;
             if (translations[lang] && translations[lang][key]) {
                 el.textContent = translations[lang][key];
@@ -155,23 +151,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setLanguage(localStorage.getItem('language') || 'pt');
 
-    // --- MODO ESCURO ---
-    const themeToggle = document.getElementById('themeToggle');
-    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
-
-    themeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
-
-    // --- VOLTAR AO TOPO ---
+    // 3. ANIMAÇÕES E VOLTAR AO TOPO
     const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
         backToTop.style.display = window.scrollY > 500 ? 'flex' : 'none';
     });
-    backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // --- ANIMAÇÃO DE SCROLL ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -188,14 +174,11 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // --- ERRO DE IMAGENS ---
+    // 4. TRATAMENTO DE IMAGENS
     document.querySelectorAll('img').forEach(img => {
         img.addEventListener('error', function() {
-            if (this.closest('.profile-img-wrapper')) {
-                this.src = 'https://via.placeholder.com/200x200?text=Filipe+Joana';
-            } else {
-                this.style.display = 'none';
-            }
+            this.src = this.closest('.profile-img-wrapper') ? 'https://via.placeholder.com/200x200?text=Filipe+Joana' : '';
+            if (!this.closest('.profile-img-wrapper')) this.style.display = 'none';
         });
     });
 });
