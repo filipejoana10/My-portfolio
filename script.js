@@ -45,10 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'education.title': 'Formação',
             'education.course': 'Técnico em Informática',
             'education.period': '2024 - Presente',
-            // Dentro de translations -> pt:
             'education.description': 'Atualmente cursando um programa técnico em Informática, desenvolvendo habilidades em tecnologia da informação, ferramentas digitais, sistemas de computador e aplicativos de software administrativos. Com foco em conhecimento prático de TI para dar suporte a ambientes de trabalho remoto e operações comerciais.',
-            // Dentro de translations -> en:
-            'education.description': 'Currently pursuing a technical program in Informatics, developing skills in information technology, digital tools, computer systems, and administrative software applications. Focused on practical IT knowledge to support remote work environments and business operations.',
+            'certifications.title': 'Certificações',
             'cert.security': 'Segurança da Informação',
             'cert.inprogress': 'Em andamento',
             'languages.title': 'Idiomas',
@@ -110,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'education.title': 'Education',
             'education.course': 'IT Technician',
             'education.period': '2024 - Present',
-            'education.description': 'Technical program in Informatics, developing skills in information technology, digital tools, and administrative software applications.',
+            'education.description': 'Currently pursuing a technical program in Informatics, developing skills in information technology, digital tools, computer systems, and administrative software applications. Focused on practical IT knowledge to support remote work environments and business operations.',
             'certifications.title': 'Certifications',
             'cert.security': 'Information Security',
             'cert.inprogress': 'In progress',
@@ -136,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
     
-    // Verifica preferência salva
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
@@ -144,8 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     themeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
-        
-        // Salva preferência
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
         } else {
@@ -157,22 +152,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const langButtons = document.querySelectorAll('.lang-btn');
     const elementsToTranslate = document.querySelectorAll('[data-i18n]');
     
-    // Carrega idioma salvo
     const savedLang = localStorage.getItem('language') || 'pt';
     setLanguage(savedLang);
     
-    // Atualiza botões ativos
     langButtons.forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === savedLang);
     });
     
-    // Event listeners para botões de idioma
     langButtons.forEach(btn => {
         btn.addEventListener('click', function() {
             const lang = this.dataset.lang;
             setLanguage(lang);
             localStorage.setItem('language', lang);
-            
             langButtons.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
         });
@@ -189,7 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== BOTÃO VOLTAR AO TOPO =====
     const backToTop = document.getElementById('backToTop');
-    
     window.addEventListener('scroll', function() {
         if (window.scrollY > 500) {
             backToTop.style.display = 'flex';
@@ -199,15 +189,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     backToTop.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     // ===== ANIMAÇÃO DE SCROLL =====
     const sections = document.querySelectorAll('.section');
-    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -226,45 +212,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== TRATAMENTO DE ERRO DE IMAGENS =====
     const images = document.querySelectorAll('img');
-    
     images.forEach(img => {
         img.addEventListener('error', function() {
-            console.warn(`Imagem não encontrada: ${this.src}`);
-            
-            // Se for uma imagem de ferramenta, esconde
             if (this.closest('.tool-item')) {
                 this.style.display = 'none';
             }
-            
-            // Se for a imagem de perfil, usa placeholder
             if (this.closest('.profile-img-wrapper')) {
                 this.src = 'https://via.placeholder.com/200x200?text=Filipe+Joana';
             }
         });
-        
-        // Adiciona loading lazy para melhor performance
         img.loading = 'lazy';
     });
 
-    // ===== WHATSAPP BUTTON TRACKING (opcional) =====
+    // ===== WHATSAPP TRACKING & LINKS =====
     const whatsappBtn = document.querySelector('.whatsapp-btn a');
     if (whatsappBtn) {
-        whatsappBtn.addEventListener('click', function() {
-            console.log('WhatsApp button clicked');
-            // Aqui podes adicionar analytics se quiseres
-        });
+        whatsappBtn.addEventListener('click', () => console.log('WhatsApp clicked'));
     }
 
-    // ===== LINKS EXTERNOS =====
     const externalLinks = document.querySelectorAll('a[target="_blank"]');
     externalLinks.forEach(link => {
         link.addEventListener('click', function() {
-            console.log(`External link clicked: ${this.href}`);
+            console.log(`External link: ${this.href}`);
         });
     });
 
-    // ===== BEM-VINDO AO CONSOLE =====
-    console.log('🚀 Site de Filipe Joana carregado!');
-    console.log('📧 Contato: filipejanny@hotmail.com');
-    console.log('💼 Disponível para oportunidades remotas');
+    console.log('🚀 Portfólio de Filipe Joana pronto!');
 });
