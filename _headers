@@ -1,7 +1,8 @@
-# Security headers
+# Security headers for wabiza.online
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-  Strict-Transport-Security: max-age=31536000
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-XSS-Protection: 1; mode=block
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
