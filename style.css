@@ -534,8 +534,14 @@ body.dark-mode .tool-item span {
 }
 
 .lang-flag {
-    font-size: 3.5em;
     margin-bottom: 15px;
+}
+
+.lang-flag img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
     filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
 }
 
