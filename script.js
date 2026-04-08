@@ -235,6 +235,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // ===== OBFUSCAÇÃO DE EMAIL E TELEFONE =====
+    function setupObfuscatedContacts() {
+        const email = String.fromCharCode(...[102,105,108,105,112,101]) + '@' + String.fromCharCode(...[119,97,98,105,122,97,46,111,110,108,105,110,101]);
+        const phone = String.fromCharCode(...[43,50,52,52,57,52,54,55,56,55,49,49,55]);
+
+        const emailLinks = document.querySelectorAll('[data-obfuscate="email"]');
+        emailLinks.forEach(link => {
+            link.href = 'mailto:' + email;
+            link.setAttribute('aria-label', 'Email');
+            if (!link.querySelector('i')) {
+                link.textContent = email;
+            }
+        });
+
+        const phoneLinks = document.querySelectorAll('[data-obfuscate="phone"]');
+        phoneLinks.forEach(link => {
+            link.href = 'tel:' + phone;
+            link.setAttribute('aria-label', 'Phone');
+            if (!link.querySelector('i')) {
+                link.textContent = '+244 946 787 117';
+            }
+        });
+    }
+    setupObfuscatedContacts();
+
     // ===== TRADUÇÃO =====
     const langButtons = document.querySelectorAll('.lang-btn');
     const elementsToTranslate = document.querySelectorAll('[data-i18n]');
@@ -351,6 +376,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== BEM-VINDO AO CONSOLE =====
     console.log('🚀 Site de Filipe Joana carregado!');
-    console.log('📧 Contato: filipejanny@hotmail.com');
+    console.log('📧 Contato disponível no rodapé');
     console.log('💼 Disponível para oportunidades remotas');
 });
