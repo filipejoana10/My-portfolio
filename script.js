@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== OBFUSCAÇÃO DE EMAIL E TELEFONE =====
     function setupObfuscatedContacts() {
-        const email = String.fromCharCode(...[102,105,108,105,112,101]) + '@' + String.fromCharCode(...[119,97,98,105,122,97,46,111,110,108,105,110,101]);
+        const email = String.fromCharCode(...[102,105,108,105,112,101,106,97,110,110,121]) + '@' + String.fromCharCode(...[104,111,116,109,97,105,108,46,99,111,109]);
         const phone = String.fromCharCode(...[43,50,52,52,57,52,54,55,56,55,49,49,55]);
 
         const emailLinks = document.querySelectorAll('[data-obfuscate="email"]');
