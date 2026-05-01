@@ -180,6 +180,8 @@ body.dark-mode #themeToggle .fa-sun { display: inline; }
 /* ===== CONTEÚDO PRINCIPAL ===== */
 .content {
     padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .section {
@@ -254,13 +256,10 @@ body.dark-mode .profile-section p {
 .exp-grid {
     display: flex;
     flex-wrap: nowrap;
-    gap: 25px;
+    gap: 10px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 10px 5px 25px 5px;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
+    padding: 5px 5px 10px 5px;
 }
 
 /* Scrollbar styling */
@@ -284,13 +283,14 @@ body.dark-mode .profile-section p {
 
 .exp-card {
     background: var(--light-card);
-    border-radius: 20px;
+    border-radius: 18px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s;
-    min-width: 320px;
-    max-width: 320px;
-    flex-shrink: 0;
+    min-width: 250px;
+    max-width: 250px;
+    height: auto;
+    min-height: fit-content;
 }
 
 body.dark-mode .exp-card {
@@ -298,13 +298,12 @@ body.dark-mode .exp-card {
 }
 
 .exp-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 30px 50px -15px rgba(0,0,0,0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px -15px rgba(0,0,0,0.3);
 }
 
 .exp-header {
-    padding: 15px;
-    color: white;
+    padding: 8px 8px 6px;
 }
 
 .exp-header.paco, 
@@ -317,14 +316,13 @@ body.dark-mode .exp-card {
 
 /* Company Logo Style */
 .company-logo {
-    width: 60px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
     background: white;
     border-radius: 50%;
-    padding: 5px;
-    margin-bottom: 15px;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 4px;
+    margin-bottom: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.16);
 }
 
 .company-logo img {
@@ -335,23 +333,23 @@ body.dark-mode .exp-card {
 }
 
 .exp-header h3 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
+    font-size: 1.1em;
+    margin-bottom: 2px;
 }
 
 .exp-header .company {
-    font-size: 1.1em;
+    font-size: 0.95em;
     opacity: 0.95;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .exp-header .period {
-    font-size: 0.9em;
+    font-size: 0.86em;
     opacity: 0.9;
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin-top: 10px;
+    gap: 3px;
+    margin-top: 6px;
 }
 
 .exp-header .period i {
@@ -359,16 +357,15 @@ body.dark-mode .exp-card {
 }
 
 .exp-list {
-    padding: 15px;
+    padding: 8px 8px 10px;
     list-style: none;
 }
 
 .exp-list li {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    color: var(--light-text);
+    gap: 5px;
 }
 
 body.dark-mode .exp-list li {
@@ -377,8 +374,8 @@ body.dark-mode .exp-list li {
 
 .exp-list li i {
     color: var(--success);
-    font-size: 1.1em;
-    margin-top: 3px;
+    font-size: 0.95em;
+    margin-top: 2px;
 }
 
 /* ===== SKILLS ===== */
@@ -1214,87 +1211,245 @@ body.dark-mode .contact-card-consolidated .contact-item a {
     font-size: 1.1em;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* ===== RESPONSIVIDADE - MOBILE FIRST ===== */
+
+/* Tablet */
 @media (max-width: 1024px) {
     .languages-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    
+    .exp-card {
+        min-width: 60vw;
+        max-width: 60vw;
+    }
 }
 
+/* Mobile - Stack Language and Contact cards vertically, but keep Experience horizontal scroll */
 @media (max-width: 768px) {
     body {
-        padding: 15px;
+        padding: 0.85rem;
     }
     
     .content {
-        padding: 30px 20px;
+        padding: 1.25rem 0.75rem;
     }
     
+    /* Relative font sizes using rem for better scaling */
     .profile-name {
-        font-size: 2.2em;
+        font-size: 2rem;
     }
     
     .profile-title {
-        font-size: 1em;
+        font-size: 0.98rem;
+        max-width: 100%;
+    }
+    
+    .profile-header {
+        padding: 40px 18px;
+    }
+
+    .profile-img-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+    .social-links {
+        gap: 14px;
+    }
+
+    .social-links a {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
     }
     
     .floating-controls {
         position: static;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
         flex-wrap: wrap;
+        gap: 0.75rem;
     }
     
     .control-btn, .lang-selector {
-        padding: 8px 15px;
-        font-size: 0.9em;
+        padding: 0.45rem 0.85rem;
+        font-size: 0.9rem;
     }
     
+    .section {
+        margin-bottom: 42px;
+    }
+
     .section-title {
-        font-size: 1.8em;
+        font-size: 1.65rem;
+        line-height: 1.1;
+        margin-bottom: 26px;
+        padding-bottom: 8px;
+    }
+
+    .section-title::after {
+        width: 70px;
+    }
+
+    .profile-section {
+        padding: 1.5rem;
+    }
+
+    .profile-section p {
+        line-height: 1.65;
+        margin-bottom: 0;
+        font-size: 0.94rem;
     }
     
+    /* KEEP horizontal scroll for experience cards on mobile */
     .exp-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.7rem;
+        padding: 0.5rem 0.15rem 0.75rem 0.15rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    
+    /* Experience cards: more compact height on mobile */
+    .exp-card {
+        min-width: 48vw;
+        max-width: 48vw;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+    
+    .exp-header {
+        padding: 0.7rem 0.55rem;
+    }
+    
+    .exp-list {
+        padding: 0.7rem 0.55rem;
+    }
+    
+    .exp-list li {
+        margin-bottom: 0.55rem;
+        line-height: 1.35;
+    }
+    
+    .exp-header .period {
+        margin-top: 8px;
     }
     
     .skills-container {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .skill-category {
+        padding: 16px;
     }
     
     .tool-grid {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+    }
+    
+    .tool-item {
+        padding: 10px 6px;
+    }
+    
+    .languages-grid {
+        gap: 10px;
+    }
+    
+    .language-card {
+        padding: 10px 8px;
+    }
+    
+    .lang-flag img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .lang-percent {
+        width: 55px;
+        height: 55px;
+        font-size: 1em;
     }
     
     .contact-grid {
         grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+    
+    .contact-item {
+        padding: 7px 8px;
+    }
+    
+    .availability-inline {
+        padding: 0.6rem 0.9rem;
+    }
+    
+    .section {
+        margin-bottom: 40px;
+    }
+    
+    /* Stack Language & Contact cards vertically on mobile */
+    .side-by-side-grid {
+        grid-template-columns: 1fr;
     }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
+    .profile-header {
+        padding: 32px 14px;
+    }
+
     .profile-img-wrapper {
-        width: 150px;
-        height: 150px;
+        width: 9rem;
+        height: 9rem;
     }
     
     .profile-name {
-        font-size: 1.8em;
+        font-size: 1.7rem;
+    }
+    
+    .profile-title {
+        font-size: 0.92rem;
+        max-width: 100%;
+    }
+    
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-links a {
+        width: 44px;
+        height: 44px;
+        font-size: 1.15rem;
     }
     
     .languages-grid {
         grid-template-columns: 1fr;
+        gap: 8px;
     }
     
     .tool-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .tool-item {
+        padding: 10px 7px;
     }
     
     .contact-item {
         flex-wrap: wrap;
+        padding: 7px 6px;
     }
     
     .contact-item a {
-        font-size: 0.9em;
+        font-size: 0.88rem;
         word-break: break-word;
     }
     
@@ -1303,62 +1458,303 @@ body.dark-mode .contact-card-consolidated .contact-item a {
         text-align: center;
     }
     
-    /* Mobile experience cards - Full width and improved layout */
+    .contact-grid {
+        max-width: 100%;
+    }
+    
+    .contact-card {
+        padding: 16px;
+    }
+    
+    /* Mobile experience cards - narrower width with scroll hint */
     .exp-grid {
-        gap: 20px;
+        gap: 0.6rem;
+        padding: 0.25rem 0.15rem 0.65rem 0.15rem;
     }
     
     .exp-card {
-        border-radius: 15px;
+        min-width: 45vw;
+        max-width: 45vw;
+        border-radius: 0.9375rem;
     }
     
     .exp-header {
-        padding: 20px 15px;
+        padding: 0.7rem 0.55rem;
     }
     
     .exp-header h3 {
-        font-size: 1.3em;
+        font-size: 1.1rem;
+        line-height: 1.2;
     }
     
     .exp-header .company {
-        font-size: 1em;
+        font-size: 0.96rem;
     }
     
     .exp-header .period {
-        font-size: 0.85em;
+        font-size: 0.84rem;
         flex-wrap: wrap;
     }
     
     .exp-list {
-        padding: 20px 15px;
+        padding: 0.8rem 0.65rem;
     }
     
     .exp-list li {
-        font-size: 0.95em;
-        margin-bottom: 12px;
-        line-height: 1.5;
+        font-size: 0.92rem;
+        margin-bottom: 0.55rem;
+        line-height: 1.35;
     }
     
     /* Company logo adjustment for mobile */
     .company-logo {
-        width: 50px;
-        height: 50px;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .lang-flag img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .lang-percent {
+        width: 60px;
+        height: 60px;
+        font-size: 1.1em;
+    }
+    
+    /* WhatsApp button mobile positioning */
+    .whatsapp-floating {
+        bottom: 5rem;
+        right: 0.85rem;
+        width: 3.25rem;
+        height: 3.25rem;
+    }
+    
+    .whatsapp-floating i {
+        font-size: 1.55rem;
+    }
+    
+    .whatsapp-tooltip {
+        display: none;
+    }
+    
+    /* Section titles responsive */
+    .section {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .section-title::after {
+        width: 60px;
+    }
+    
+    /* Skills tags wrap properly */
+    .skill-tags {
+        gap: 0.5rem;
+    }
+    
+    .skill-tag {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.82rem;
     }
 }
 
 /* Extra small devices */
 @media (max-width: 360px) {
+    .profile-header {
+        padding: 28px 12px;
+    }
+
+    .profile-img-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profile-name {
+        font-size: 1.5rem;
+    }
+
+    .profile-title {
+        font-size: 0.88rem;
+    }
+
     .exp-header {
-        padding: 15px;
+        padding: 0.6rem 0.5rem;
     }
     
     .exp-header h3 {
-        font-size: 1.2em;
+        font-size: 1.05rem;
+    }
+    
+    .exp-card {
+        min-width: 40vw;
+        max-width: 40vw;
+    }
+    
+    .exp-list {
+        padding: 0.7rem 0.5rem;
+    }
+    
+    .exp-list li {
+        margin-bottom: 0.45rem;
+        line-height: 1.28;
     }
     
     .company-logo {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 10px;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-bottom: 0.55rem;
     }
+    
+    .lang-flag img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .lang-percent {
+        width: 48px;
+        height: 48px;
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.35rem;
+    }
+    
+    .section-title::after {
+        width: 55px;
+    }
+    
+    .skill-tag {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.7rem;
+    }
+
+    .section {
+        margin-bottom: 32px;
+    }
+
+    .profile-section {
+        padding: 1.25rem;
+    }
+
+    .tool-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-card {
+        padding: 14px;
+    }
+
+    .whatsapp-floating {
+        bottom: 4.75rem;
+        right: 0.75rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .whatsapp-floating i {
+        font-size: 1.45rem;
+    }
+}
+
+/* ===== IMAGES RESPONSIVE ===== */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-img-wrapper img,
+.company-logo img,
+.tool-item img,
+.language-item img,
+.lang-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== FLOATING CONTROLS RESPONSIVE ===== */
+.floating-controls {
+    padding: 0.5rem;
+}
+
+.control-btn, .lang-selector {
+    box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.15);
+}
+
+/* ===== PROFILE SECTION RESPONSIVE ===== */
+.profile-section {
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+}
+
+.profile-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ===== SKILLS RESPONSIVE ===== */
+.skills-container {
+    gap: 1.5625rem;
+}
+
+.skill-category {
+    padding: 1.5625rem;
+    border-radius: 1.25rem;
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+}
+
+/* ===== TOOLS RESPONSIVE ===== */
+.tool-grid {
+    gap: 0.9375rem;
+}
+
+.tool-item {
+    padding: 0.9375rem 0.3125rem;
+}
+
+.tool-item img {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+/* ===== EDUCATION RESPONSIVE ===== */
+.edu-card {
+    padding: 2.1875rem;
+    border-radius: 1.25rem;
+}
+
+.edu-card h3 {
+    font-size: 1.8rem;
+}
+
+/* ===== FOOTER RESPONSIVE ===== */
+footer {
+    padding: 1.875rem;
+}
+
+/* ===== WhatsApp Button High Z-Index ===== */
+.whatsapp-floating {
+    position: fixed;
+    bottom: 5.625rem;
+    right: 1.5625rem;
+    width: 4.0625rem;
+    height: 4.0625rem;
+    z-index: 99999;
+}
+
+.whatsapp-floating i {
+    font-size: 2rem;
 }
