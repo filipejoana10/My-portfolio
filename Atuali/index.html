@@ -7,22 +7,14 @@
     <!-- SEO Meta Tags -->
     <title>Filipe Joana | Suporte ao Cliente | Call Center | CRM | Assistente Virtual</title>
     <meta name="description" content="Portfólio profissional de Filipe Joana, especialista em Suporte ao Cliente, Call Center, CRM e Assistente Virtual. Experiência em trabalho remoto e ferramentas digitais.">
-    <link rel="canonical" href="https://www.wabiza.online/">
-    <link rel="icon" href="/assets/filipe.jpg" type="image/jpeg">
-    <link rel="shortcut icon" href="/assets/filipe.jpg">
-    <link rel="apple-touch-icon" href="/assets/filipe.jpg">
+    <link rel="canonical" href="https://filipejoana.com/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.wabiza.online/">
+    <meta property="og:url" content="https://filipejoana.com/">
     <meta property="og:title" content="Filipe Joana | Suporte ao Cliente & Assistente Virtual">
     <meta property="og:description" content="Especialista em Suporte ao Cliente e Call Center com vasta experiência em CRM e operações remotas.">
-    <meta property="og:image" content="https://www.wabiza.online/assets/filipe.jpg">
-    <meta property="og:image:alt" content="Filipe Joana">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://www.wabiza.online/assets/filipe.jpg">
-    <link rel="image_src" href="https://www.wabiza.online/assets/filipe.jpg">
+    <meta property="og:image" content="https://filipejoana.com/assets/og-image.jpg">
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -31,7 +23,7 @@
       "@type": "Person",
       "name": "Filipe Joana",
       "jobTitle": "Customer Support Specialist",
-      "url": "https://www.wabiza.online",
+      "url": "https://filipejoana.com",
       "sameAs": [
         "https://www.linkedin.com/in/filipejoana/"
       ],
@@ -45,6 +37,7 @@
 
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -54,14 +47,19 @@
     <header>
         <nav class="container">
             <div class="logo">
+                <span class="logo-text">Filipe<span>Joana</span></span>
             </div>
             <ul class="nav-links">
                 <li><a href="#profile" data-i18n="nav-profile">Perfil</a></li>
                 <li><a href="#experience" data-i18n="nav-experience">Experiência</a></li>
                 <li><a href="#skills" data-i18n="nav-skills">Competências</a></li>
                 <li><a href="#education" data-i18n="nav-education">Formação</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Contacto</a></li>
             </ul>
             <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <div class="lang-switcher">
                     <button class="lang-btn active" data-lang="pt">
                         <img src="https://flagcdn.com/pt.svg" alt="PT">
@@ -86,13 +84,9 @@
                         <img src="assets/filipe.jpg" alt="Filipe Joana" loading="lazy" onerror="this.src='https://via.placeholder.com/320x320?text=Filipe+Joana'">
                     </div>
                     <h1 data-i18n="hero-title">Filipe Joana</h1>
-                    <h2 data-i18n="hero-subtitle"></h2>
+                    <h2 data-i18n="hero-subtitle">Suporte ao Cliente | Call Center | CRM | Assistente Virtual</h2>
                     <p class="location"><i class="fas fa-map-marker-alt"></i> Luanda, Angola</p>
-                    <div class="contact-icons">
-                        <a href="mailto:filipejanny@hotmail.com" class="contact-icon-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+244946787117" class="contact-icon-link" aria-label="Telefone"><i class="fas fa-phone"></i></a>
-                        <a href="https://www.linkedin.com/in/filipejoana/" target="_blank" class="contact-icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -291,6 +285,7 @@
                                 <div class="tool-item"><img src="https://cdn.worldvectorlogo.com/logos/azure-2.svg" alt="Azure"><span>Azure</span></div>
                                 <div class="tool-item"><img src="https://www.vectorlogo.zone/logos/cisco/cisco-icon.svg" alt="Packet Tracer"><span>Packet Tracer</span></div>
                                 <div class="tool-item"><img src="https://cdn.worldvectorlogo.com/logos/wireshark.svg" alt="Wireshark"><span>Wireshark</span></div>
+                                <div class="tool-item"><img src="https://www.vectorlogo.zone/logos/gns3/gns3-icon.svg" alt="GNS3"><span>GNS3</span></div>
                                 <div class="tool-item"><img src="https://cdn.worldvectorlogo.com/logos/huawei-2.svg" alt="Huawei"><span>Huawei ENSP</span></div>
                                 <!-- Duplicate for seamless loop -->
                                 <div class="tool-item"><img src="https://cdn.worldvectorlogo.com/logos/tux.svg" alt="Linux"><span>Linux</span></div>
@@ -304,35 +299,35 @@
                     <div class="skill-group">
                         <h3 data-i18n="skills-cat-tools">Ferramentas Digitais</h3>
                         <div class="tools-grid">
-                            <div class="tool-item"><img src="communication/slack.jpg" alt="Slack" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Slack</span></div>
-                            <div class="tool-item"><img src="communication/microsoft-teams.jpg" alt="Teams" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Teams</span></div>
-                            <div class="tool-item"><img src="communication/google-meet.jpg" alt="Meet" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Meet</span></div>
-                            <div class="tool-item"><img src="communication/outlook.jpg" alt="Outlook" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Outlook</span></div>
-                            <div class="tool-item"><img src="communication/skype.jpg" alt="Skype" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Skype</span></div>
-                            <div class="tool-item"><img src="communication/viber.jpg" alt="Viber" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Viber</span></div>
-                            <div class="tool-item"><img src="communication/whatsapp.jpg" alt="WhatsApp" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>WhatsApp</span></div>
-                            <div class="tool-item"><img src="communication/zoom.jpg" alt="Zoom" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Zoom</span></div>
+                            <div class="tool-item"><img src="../communication/slack.jpg" alt="Slack" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Slack</span></div>
+                            <div class="tool-item"><img src="../communication/microsoft-teams.jpg" alt="Teams" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Teams</span></div>
+                            <div class="tool-item"><img src="../communication/google-meet.jpg" alt="Meet" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Meet</span></div>
+                            <div class="tool-item"><img src="../communication/outlook.jpg" alt="Outlook" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Outlook</span></div>
+                            <div class="tool-item"><img src="../communication/skype.jpg" alt="Skype" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Skype</span></div>
+                            <div class="tool-item"><img src="../communication/viber.jpg" alt="Viber" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Viber</span></div>
+                            <div class="tool-item"><img src="../communication/whatsapp.jpg" alt="WhatsApp" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>WhatsApp</span></div>
+                            <div class="tool-item"><img src="../communication/zoom.jpg" alt="Zoom" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Zoom</span></div>
                             <div class="tool-item"><img src="https://cdn.worldvectorlogo.com/logos/telegram-1.svg" alt="Telegram" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Telegram</span></div>
-                            <div class="tool-item"><img src="crm/pipedrive.jpg" alt="Pipedrive" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Pipedrive</span></div>
-                            <div class="tool-item"><img src="crm/HubSpot.jpg" alt="HubSpot" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>HubSpot</span></div>
-                            <div class="tool-item"><img src="google%20workplace/gmail.jpg" alt="Gmail" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Gmail</span></div>
-                            <div class="tool-item"><img src="google%20workplace/drive.jpg" alt="Drive" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Drive</span></div>
-                            <div class="tool-item"><img src="google%20workplace/doc.jpg" alt="Docs" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Docs</span></div>
-                            <div class="tool-item"><img src="google%20workplace/sheets.jpg" alt="Sheets" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Sheets</span></div>
-                            <div class="tool-item"><img src="google%20workplace/slides.jpg" alt="Slides" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Slides</span></div>
-                            <div class="tool-item"><img src="scheduling/google-calendar.jpg" alt="Calendar" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Calendar</span></div>
-                            <div class="tool-item"><img src="google%20workplace/gemini.jpg" alt="Gemini" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Gemini</span></div>
-                            <div class="tool-item"><img src="microsoft%20office/microsoft-word.jpg" alt="Word" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Word</span></div>
-                            <div class="tool-item"><img src="microsoft%20office/excel.jpg" alt="Excel" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Excel</span></div>
-                            <div class="tool-item"><img src="microsoft%20office/microsoft-powerpoint.jpg" alt="PowerPoint" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>PowerPoint</span></div>
-                            <div class="tool-item"><img src="microsoft%20office/OneNote.jpg" alt="OneNote" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>OneNote</span></div>
-                            <div class="tool-item"><img src="microsoft%20office/onedrive.jpg" alt="OneDrive" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>OneDrive</span></div>
-                            <div class="tool-item"><img src="microsoft%20office/Copilot.jpg" alt="Copilot" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Copilot</span></div>
-                            <div class="tool-item"><img src="tools/trello.jpg" alt="Trello" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Trello</span></div>
-                            <div class="tool-item"><img src="tools/jira.jpg" alt="Jira" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Jira</span></div>
-                            <div class="tool-item"><img src="tools/notion.jpg" alt="Notion" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Notion</span></div>
-                            <div class="tool-item"><img src="tools/Asana.jpg" alt="Asana" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Asana</span></div>
-                            <div class="tool-item"><img src="tools/clockify.jpg" alt="Clockify" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Clockify</span></div>
+                            <div class="tool-item"><img src="../crm/pipedrive.jpg" alt="Pipedrive" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Pipedrive</span></div>
+                            <div class="tool-item"><img src="../crm/HubSpot.jpg" alt="HubSpot" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>HubSpot</span></div>
+                            <div class="tool-item"><img src="../google%20workplace/gmail.jpg" alt="Gmail" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Gmail</span></div>
+                            <div class="tool-item"><img src="../google%20workplace/drive.jpg" alt="Drive" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Drive</span></div>
+                            <div class="tool-item"><img src="../google%20workplace/doc.jpg" alt="Docs" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Docs</span></div>
+                            <div class="tool-item"><img src="../google%20workplace/sheets.jpg" alt="Sheets" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Sheets</span></div>
+                            <div class="tool-item"><img src="../google%20workplace/slides.jpg" alt="Slides" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Slides</span></div>
+                            <div class="tool-item"><img src="../scheduling/google-calendar.jpg" alt="Calendar" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Calendar</span></div>
+                            <div class="tool-item"><img src="../google%20workplace/gemini.jpg" alt="Gemini" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Gemini</span></div>
+                            <div class="tool-item"><img src="../microsoft%20office/microsoft-word.jpg" alt="Word" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Word</span></div>
+                            <div class="tool-item"><img src="../microsoft%20office/excel.jpg" alt="Excel" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Excel</span></div>
+                            <div class="tool-item"><img src="../microsoft%20office/microsoft-powerpoint.jpg" alt="PowerPoint" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>PowerPoint</span></div>
+                            <div class="tool-item"><img src="../microsoft%20office/OneNote.jpg" alt="OneNote" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>OneNote</span></div>
+                            <div class="tool-item"><img src="../microsoft%20office/onedrive.jpg" alt="OneDrive" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>OneDrive</span></div>
+                            <div class="tool-item"><img src="../microsoft%20office/Copilot.jpg" alt="Copilot" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Copilot</span></div>
+                            <div class="tool-item"><img src="../tools/trello.jpg" alt="Trello" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Trello</span></div>
+                            <div class="tool-item"><img src="../tools/jira.jpg" alt="Jira" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Jira</span></div>
+                            <div class="tool-item"><img src="../tools/notion.jpg" alt="Notion" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Notion</span></div>
+                            <div class="tool-item"><img src="../tools/Asana.jpg" alt="Asana" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Asana</span></div>
+                            <div class="tool-item"><img src="../tools/clockify.jpg" alt="Clockify" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Logo'"><span>Clockify</span></div>
                         </div>
                     </div>
                 </div>
@@ -351,19 +346,7 @@
                             <p class="date">2024 – <span data-i18n="present">Presente</span></p>
                             <p class="edu-desc" data-i18n="edu-desc">Atualmente cursando um programa técnico em Informática, desenvolvendo habilidades em tecnologia da informação, ferramentas digitais, sistemas de computadores e aplicações de software administrativo. Focado em conhecimento prático de TI para apoiar ambientes de trabalho remoto e operações empresariais.</p>
                         </div>
-                        <!-- availability moved to center between Formation and Languages -->
                     </div>
-                    <div class="availability-center">
-                        <div class="contact-info-centered">
-                            <h3 data-i18n="contact-subtitle">Vamos trabalhar juntos?</h3>
-                            <p data-i18n="contact-desc">Estou disponível para novas oportunidades e desafios em regime remoto.</p>
-                            <div class="availability-banner" aria-label="Disponibilidade">
-                                <i class="fas fa-clock"></i>
-                                <p><strong data-i18n="contact-avail">Disponibilidade:</strong> Seg-Sex (9h-17h) - Luanda GMT+1</p>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="languages-box">
                         <h2 class="section-title" data-i18n="languages-title">Idiomas</h2>
                         <div class="lang-logos-grid">
@@ -394,7 +377,40 @@
             </div>
         </section>
 
-        <!-- Contact section removed; availability banner moved to Education section -->
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact-title">Contacto</h2>
+                <div class="contact-container-simple">
+                    <div class="contact-info-centered">
+                        <h3 data-i18n="contact-subtitle">Vamos trabalhar juntos?</h3>
+                        <p data-i18n="contact-desc">Estou disponível para novas oportunidades e desafios em regime remoto.</p>
+                        <div class="contact-methods-grid">
+                            <a href="mailto:filipejanny@hotmail.com" class="contact-method-card">
+                                <i class="fas fa-envelope"></i>
+                                <span>filipejanny@hotmail.com</span>
+                            </a>
+                            <a href="tel:+244946787117" class="contact-method-card">
+                                <i class="fas fa-phone"></i>
+                                <span>+244 946 787 117</span>
+                            </a>
+                            <a href="https://wa.me/244946787117" class="contact-method-card" target="_blank">
+                                <img src="../communication/whatsapp.jpg" alt="WhatsApp" class="contact-icon">
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/filipejoana/" target="_blank" class="contact-method-card">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                        <div class="availability-banner">
+                            <i class="fas fa-clock"></i>
+                            <p><strong data-i18n="contact-avail">Disponibilidade:</strong> Seg-Sex (9h-17h) - Luanda GMT+1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -410,8 +426,8 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/244946787117" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" loading="lazy">
+    <a href="https://wa.me/244946787117" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp">
+        <img src="https://cdn.worldvectorlogo.com/logos/whatsapp-symbol.svg" alt="WhatsApp">
     </a>
 
     <script src="script.js"></script>
