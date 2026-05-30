@@ -539,6 +539,11 @@ nav {
     margin: 0;
 }
 
+/* Cada .tools-row representa uma “linha” do teu ecossistema */
+.tools-row + .tools-row {
+    margin-top: 1rem;
+}
+
 .tools-row-items {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -570,6 +575,7 @@ nav {
     color: rgba(255,255,255,0.9);
 }
 
+/* No mobile, o Bento Grid mantém o mesmo modelo (linhas independentes) */
 @media (max-width: 768px) {
     .tools-row-items {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -581,7 +587,24 @@ nav {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.75rem;
     }
+
+    /* espaço entre as linhas do ecossistema também no mobile */
+    .tools-row + .tools-row {
+        margin-top: 0.85rem;
+    }
+
+
+    .tools-row-items .tool-item {
+        padding: 0.8rem 0.6rem;
+    }
+
+    .tools-row-items .tool-item img {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+    }
 }
+
 
 
 .skill-text-list span {
