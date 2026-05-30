@@ -552,6 +552,35 @@ nav {
     gap: 0.9rem;
 }
 
+.tools-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tools-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.tools-row-label {
+    flex: 0 0 180px;
+    min-width: 140px;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    align-self: center;
+}
+
+.tools-row-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    flex: 1;
+}
+
 .scrolling-wrapper {
     overflow: hidden;
     width: 100%;
@@ -867,34 +896,209 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-    .edu-lang-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 1.5rem;
     }
-    
+
+    .hero-content h1 {
+        font-size: 3.4rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .hero-content {
+        gap: 1rem;
+    }
+
     .hero-content h1 {
         font-size: 3rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.35rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-card {
+        padding: 2rem;
+    }
+
+    .timeline {
+        max-width: 100%;
+    }
+
+    .tools-row {
+        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
     .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        padding: 0.5rem 0;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .lang-switcher {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mobile-menu-btn {
         display: none;
     }
-    
-    .mobile-menu-btn {
-        display: block;
-    }
-    
+
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
-    
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-badges {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .hero-cta {
         flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
-    
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .setup-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-item {
+        padding-left: 44px;
+    }
+
+    .timeline-dot {
+        left: 2px;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .skill-text-list {
+        flex-direction: column;
+    }
+
+    .tools-row {
+        flex-direction: column;
+    }
+
+    .tools-row-items {
+        justify-content: center;
+    }
+
+    .tool-item {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .lang-logo-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .edu-lang-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+    }
+
+    .hero-image img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero-badges {
+        gap: 0.75rem;
+    }
+
+    .tool-item {
+        padding: 0.85rem;
+    }
+
+    .tool-item span {
+        font-size: 0.78rem;
+    }
+
+    .skill-group {
+        padding: 1rem;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
     }
 }
