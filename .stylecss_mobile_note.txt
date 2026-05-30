@@ -1,2 +1,0 @@
-(internal) mobile fixes in style.css: corrected nav-links.open block + added main padding-top + reduced whatsapp float on <=576px.
-

@@ -56,13 +56,7 @@ section {
     padding: 5rem 0;
 }
 
-/* Compensa o header fixo (content) para não ficar escondido */
-main {
-    padding-top: 80px;
-}
-
 .section-subtitle {
-
     max-width: 900px;
     margin: -2rem auto 2.5rem;
     text-align: center;
@@ -186,15 +180,21 @@ nav {
     cursor: pointer;
 }
 
-    .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        max-width: 760px;
-        margin: 0 auto;
-    }
+/* Hero Section */
+.hero-section {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 760px;
+    margin: 0 auto;
+}
 
 .hero-image {
     margin: 0 auto 1.5rem;
@@ -497,7 +497,14 @@ nav {
     gap: 4rem;
 }
 
+/* Garante alinhamento correto em “Ferramentas Digitais” e evita que fique tudo junto */
+.skill-group {
+    display: flex;
+    flex-direction: column;
+}
+
 .skill-group h3 {
+
     margin-bottom: 2rem;
     font-size: 1.5rem;
     background-image: var(--accent-gradient);
@@ -522,6 +529,60 @@ nav {
     border-left: 4px solid var(--card-accent);
     box-shadow: 0 12px 28px rgba(0,0,0,0.55);
 }
+
+/* Bento Grid: Ferramentas Digitais */
+.tools-list {
+    width: 100%;
+}
+
+.tools-row {
+    margin: 0;
+}
+
+.tools-row-items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+/* Minimalist dark cards for tools */
+.tools-row-items .tool-item {
+    min-height: unset;
+    height: 100%;
+    padding: 0.9rem 0.75rem;
+    border-radius: 14px;
+    background-color: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: none;
+}
+
+.tools-row-items .tool-item img {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    padding: 0.35rem;
+}
+
+.tools-row-items .tool-item span {
+    min-height: unset;
+    font-size: 0.82rem;
+    margin-top: 0.25rem;
+    color: rgba(255,255,255,0.9);
+}
+
+@media (max-width: 768px) {
+    .tools-row-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .tools-row-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+}
+
 
 .skill-text-list span {
     display: inline-block;
@@ -550,35 +611,6 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 0.9rem;
-}
-
-.tools-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.tools-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: flex-start;
-}
-
-.tools-row-label {
-    flex: 0 0 180px;
-    min-width: 140px;
-    font-weight: 700;
-    color: var(--primary-color);
-    font-size: 0.95rem;
-    align-self: center;
-}
-
-.tools-row-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.9rem;
-    flex: 1;
 }
 
 .scrolling-wrapper {
@@ -896,273 +928,35 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 1200px) {
-    .container {
-        padding: 0 1.5rem;
-    }
-
-    .hero-content h1 {
-        font-size: 3.4rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.45rem;
-    }
-}
-
 @media (max-width: 992px) {
-    .container {
-        padding: 0 1.25rem;
-    }
-
-    .hero-content {
-        gap: 1rem;
+    .edu-lang-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero-content h1 {
         font-size: 3rem;
     }
-
-    .hero-content h2 {
-        font-size: 1.35rem;
-    }
-
-    .hero-image img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .profile-card {
-        padding: 2rem;
-    }
-
-    .timeline {
-        max-width: 100%;
-    }
-
-    .tools-row {
-        justify-content: center;
-    }
 }
 
 @media (max-width: 768px) {
-    header nav {
-        position: relative;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-        padding: 1rem 0;
-    }
-
     .nav-links {
         display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        gap: 0.75rem;
-        padding: 1rem 1.5rem;
-        background-color: var(--bg-color);
-        border-top: 1px solid rgba(255,255,255,0.08);
-        z-index: 2000;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-links li {
-        text-align: center;
-    }
-
-    .nav-actions {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .lang-switcher {
-        width: 100%;
-        justify-content: center;
     }
 
     .mobile-menu-btn {
-        display: flex;
+        display: block;
     }
 
     .hero-content h1 {
-        font-size: 2.4rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero-image img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .hero-badges {
-        flex-wrap: wrap;
-        justify-content: center;
+        font-size: 2.5rem;
     }
 
     .hero-cta {
         flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .hero-cta .btn {
-        width: 100%;
-        max-width: 320px;
-        justify-content: center;
-    }
-
-    .setup-info {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .timeline {
-        padding-left: 0;
-    }
-
-    .timeline::before {
-        left: 8px;
-    }
-
-    .timeline-item {
-        padding-left: 44px;
-    }
-
-    .timeline-dot {
-        left: 2px;
-    }
-
-    .timeline-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .skill-text-list {
-        flex-direction: column;
-    }
-
-    .tools-row {
-        flex-direction: column;
-    }
-
-    .tools-row-items {
-        justify-content: center;
-    }
-
-    .tool-item {
-        width: 100%;
-        min-width: unset;
-    }
-
-    .lang-logo-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .edu-lang-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 400px) {
-    .timeline::before {
-        left: 6px;
-    }
-
-    .timeline-item {
-        padding-left: 38px;
-    }
-
-    .timeline-dot {
-        left: 0;
-        top: 10px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.1rem;
     }
 
     .section-title {
-        font-size: 1.35rem;
-        margin-bottom: 2.5rem;
+        font-size: 1.75rem;
     }
 }
 
-@media (max-width: 320px) {
-    .profile-card {
-        padding: 1.25rem;
-    }
-
-    .setup-info {
-        padding: 1.1rem;
-    }
-
-    .tool-item {
-        padding: 0.75rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .container {
-        padding: 0 1rem;
-    }
-
-
-
-    /* WhatsApp button menor para não cobrir conteúdo */
-    .whatsapp-float {
-        bottom: 18px;
-        right: 18px;
-        width: 56px;
-        height: 56px;
-    }
-
-    .whatsapp-float img {
-        width: 34px;
-        height: 34px;
-    }
-
-
-    section {
-        padding: 3rem 0;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .hero-image img {
-        width: 160px;
-        height: 160px;
-    }
-
-    .hero-badges {
-        gap: 0.75rem;
-    }
-
-    .tool-item {
-        padding: 0.85rem;
-    }
-
-    .tool-item span {
-        font-size: 0.78rem;
-    }
-
-    .skill-group {
-        padding: 1rem;
-    }
-
-    .profile-card {
-        padding: 1.5rem;
-    }
-}
