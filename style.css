@@ -56,7 +56,13 @@ section {
     padding: 5rem 0;
 }
 
+/* Compensa o header fixo (content) para não ficar escondido */
+main {
+    padding-top: 80px;
+}
+
 .section-subtitle {
+
     max-width: 900px;
     margin: -2rem auto 2.5rem;
     text-align: center;
@@ -182,13 +188,13 @@ nav {
 
     .nav-links.open {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        max-width: 760px;
+        margin: 0 auto;
     }
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    max-width: 760px;
-    margin: 0 auto;
-}
+
 
 .hero-image {
     margin: 0 auto 1.5rem;
@@ -1068,10 +1074,64 @@ footer {
     }
 }
 
+@media (max-width: 400px) {
+    .timeline::before {
+        left: 6px;
+    }
+
+    .timeline-item {
+        padding-left: 38px;
+    }
+
+    .timeline-dot {
+        left: 0;
+        top: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .profile-card {
+        padding: 1.25rem;
+    }
+
+    .setup-info {
+        padding: 1.1rem;
+    }
+
+    .tool-item {
+        padding: 0.75rem;
+    }
+}
+
 @media (max-width: 576px) {
     .container {
         padding: 0 1rem;
     }
+
+
+
+    /* WhatsApp button menor para não cobrir conteúdo */
+    .whatsapp-float {
+        bottom: 18px;
+        right: 18px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .whatsapp-float img {
+        width: 34px;
+        height: 34px;
+    }
+
 
     section {
         padding: 3rem 0;
