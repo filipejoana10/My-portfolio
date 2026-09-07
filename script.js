@@ -6,7 +6,7 @@ const translations = {
         "nav-education": "Formação",
         "nav-contact": "Contacto",
         "hero-title": "Filipe Joana",
-        "hero-subtitle": "Suporte ao Cliente | Call Center | Suporte Técnico ao Cliente | Assistente Virtual",
+        "hero-subtitle": "Technical Customer Support | Call Center | Suporte ao Cliente | Assistente Virtual",
         "badge-remote": "Disponível para trabalho remoto",
         "badge-immediate": "Início imediato",
         "btn-contact": "Entrar em Contacto",
@@ -26,7 +26,7 @@ const translations = {
         "exp2-d1": "Gestão de comunicação com clientes e fornecedores em ambiente remoto",
         "exp2-d2": "Organização e manutenção de dados estruturados usando Google Workspace",
         "exp2-d3": "Coordenação de fluxo de trabalho e acompanhamento de tarefas com Trello",
-        "exp2-d4": "Pesquisa e organização de informações estratégicas para tomada de decisões",
+        "exp2-d4": "Organização de informações estratégicas para tomada de decisões",
         "exp2-d5": "Suporte administrativo remoto para otimização de operações internas",
         "exp2-d6": "Coordenação de horários, reservas e comunicação digital com clientes",
         "exp2-d7": "Apoio ao processo de vendas: criação de anúncios (OLX, Vinted)",
@@ -36,7 +36,7 @@ const translations = {
         "exp3-d3": "Identificação de necessidades e soluções personalizadas para o cliente",
         "exp3-d4": "Gestão de pedidos e acompanhamento pós-venda",
         "exp3-d5": "Foco em satisfação e retenção de clientes",
-        "exp3-d6": "Vendas consultivas de suplementos nutricionais",
+        "exp3-d6": "Vendas consultivas e atendimento centrado no cliente",
         "exp3-d7": "Elaboração e envio de relatórios de atividades através do Telegram",
         "exp4-role": "Suporte ao Cliente e Suporte de Vendas",
         "exp4-d1": "Suporte ao cliente via telefone e e-mail",
@@ -106,7 +106,7 @@ const translations = {
         "nav-education": "Education",
         "nav-contact": "Contact",
         "hero-title": "Filipe Joana",
-        "hero-subtitle": "Customer Support | Call Center | Technical Customer Support | Virtual Assistant",
+        "hero-subtitle": "Technical Customer Support | Call Center | Customer Support | Virtual Assistant",
         "badge-remote": "Available for remote work",
         "badge-immediate": "Immediate start",
         "btn-contact": "Get In Touch",
@@ -126,7 +126,7 @@ const translations = {
         "exp2-d1": "Communication management with clients and suppliers in a remote environment",
         "exp2-d2": "Organization and maintenance of structured data using Google Workspace",
         "exp2-d3": "Workflow coordination and task tracking with Trello",
-        "exp2-d4": "Research and organization of strategic information for decision making",
+        "exp2-d4": "Organization of strategic information for decision making",
         "exp2-d5": "Remote administrative support for optimizing internal operations",
         "exp2-d6": "Coordination of schedules, reservations, and digital communication with clients",
         "exp2-d7": "Sales process support: creation of ads (OLX, Vinted)",
@@ -136,7 +136,7 @@ const translations = {
         "exp3-d3": "Identification of needs and personalized solutions for the client",
         "exp3-d4": "Order management and post-sales follow-up",
         "exp3-d5": "Focus on customer satisfaction and retention",
-        "exp3-d6": "Consultative sales of nutritional supplements",
+        "exp3-d6": "Consultative sales and customer-focused support",
         "exp3-d7": "Preparation and sending of activity reports via Telegram",
         "exp4-role": "Customer Support & Sales Support",
         "exp4-d1": "Customer support via phone and email",
@@ -156,7 +156,6 @@ const translations = {
         "s-support-8": "Chat Support",
         "s-support-9": "Inbound/Outbound Calls",
         "s-support-10": "CRM Management",
-        "s-support-11": "Research",
         "s-support-12": "Complaint Resolution",
         "s-support-13": "Customer Satisfaction",
         "skills-cat-sales": "Sales & CRM",
@@ -170,7 +169,6 @@ const translations = {
         "s-sales-10": "Order Processing",
         "s-sales-11": "Post-Sales Follow-up",
         "s-sales-12": "Consultative Sales",
-        "s-sales-13": "Nutritional Supplements",
         "s-sales-14": "Sales Reports",
         "s-sales-15": "Online Channel Customer Service",
         "skills-cat-remote": "Remote Operations",
@@ -183,7 +181,6 @@ const translations = {
         "s-remote-7": "Task Coordination",
         "s-remote-8": "Workflow Management",
         "s-remote-9": "Deadline Compliance",
-        "s-remote-10": "Strategic Research",
         "skills-cat-it": "IT & Technical",
         "skills-cat-tools": "Digital Tools",
         "education-title": "Education",
@@ -272,17 +269,6 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = placeholder;
             img.style.display = 'block';
         });
-    });
-
-    // Keep hero subtitle text stable to avoid duplication on each language toggle.
-    document.addEventListener('click', (e) => {
-        const btn = e.target.closest && e.target.closest('.lang-btn');
-        if (!btn) return;
-        const lang = btn.getAttribute('data-lang');
-        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.documentElement.lang = lang === 'pt' ? 'pt-PT' : 'en-US';
-        applyTranslations(lang);
     });
 
     // Initialize translations on load using html lang or default to 'pt'
