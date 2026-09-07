@@ -6,12 +6,12 @@ const translations = {
         "nav-education": "Formação",
         "nav-contact": "Contacto",
         "hero-title": "Filipe Joana",
-        "hero-subtitle": "Suporte ao Cliente | Call Center | CRM | Assistente Virtual",
+        "hero-subtitle": "Suporte ao Cliente | Call Center | Suporte Técnico ao Cliente | Assistente Virtual",
         "badge-remote": "Disponível para trabalho remoto",
         "badge-immediate": "Início imediato",
         "btn-contact": "Entrar em Contacto",
         "profile-title": "Perfil",
-        "profile-desc": "Profissional de Suporte ao Cliente e Call Center com experiência em ambientes remotos, gestão de CRM, acompanhamento de leads e desenvolvimento de relacionamento com clientes. Forte experiência em suporte multicanal (telefone, e-mail e chat), conversão de vendas e retenção de clientes. Organizado, focado em resultados e experiente em ferramentas digitais para operações remotas.",
+        "profile-desc": "Profissional de suporte ao cliente com experiência em atendimento por e-mail, chat e telefone, incluindo ambientes remotos. Experiência em comunicação com clientes, resolução de problemas, troubleshooting e apoio às operações do dia a dia com ferramentas digitais. Atualmente cursando Informática, desenvolvendo conhecimento prático em Linux, SSH, redes e troubleshooting técnico. Confiável, adaptável e comprometido em oferecer suporte claro e útil enquanto continua a desenvolver competências técnicas.",
         "profile-setup": "Totalmente equipado para trabalho remoto com conexão de internet estável, computador pessoal e configuração profissional de home office.",
         "experience-title": "Experiência Profissional",
         "remote": "Remoto",
@@ -30,7 +30,6 @@ const translations = {
         "exp2-d5": "Suporte administrativo remoto para otimização de operações internas",
         "exp2-d6": "Coordenação de horários, reservas e comunicação digital com clientes",
         "exp2-d7": "Apoio ao processo de vendas: criação de anúncios (OLX, Vinted)",
-        "exp2-d8": "Gestão de calendário e agendamento de clientes",
         "exp3-role": "Representante de Vendas Call Center",
         "exp3-d1": "Atendimento de chamadas inbound e outbound",
         "exp3-d2": "Apresentações consultivas de vendas",
@@ -57,10 +56,8 @@ const translations = {
         "s-support-8": "Suporte por Chat",
         "s-support-9": "Chamadas Inbound/Outbound",
         "s-support-10": "Gestão de CRM",
-        "s-support-11": "Pesquisas",
         "s-support-12": "Resolução de Reclamações",
         "s-support-13": "Satisfação do Cliente",
-        "s-support-14": "Conhecimento em Produtos Digitais e Gaming",
         "skills-cat-sales": "Vendas e CRM",
         "s-sales-1": "Gestão de CRM",
         "s-sales-2": "Pipedrive",
@@ -68,13 +65,10 @@ const translations = {
         "s-sales-4": "Geração de Leads",
         "s-sales-5": "Acompanhamento de Leads",
         "s-sales-6": "Conversão de Vendas",
-        "s-sales-7": "Acompanhamento de KPI",
-        "s-sales-8": "Acompanhamento de Performance",
         "s-sales-9": "Suporte de Vendas",
         "s-sales-10": "Processamento de Pedidos",
         "s-sales-11": "Acompanhamento Pós-Venda",
         "s-sales-12": "Vendas Consultivas",
-        "s-sales-13": "Suplementos Nutricionais",
         "s-sales-14": "Relatórios de Vendas",
         "s-sales-15": "Atendimento ao Cliente em Canais Online",
         "skills-cat-remote": "Operações Remotas",
@@ -97,8 +91,8 @@ const translations = {
         "lang-pt-level": "Nativo",
         "lang-ln": "Lingala",
         "lang-ln-level": "Fluente",
-        "lang-en": "Inglês",
-        "lang-en-level": "Básico - Atualmente em Aprimoramento",
+        "lang-en": "English",
+        "lang-en-level": "English — Professional Working Proficiency",
         "contact-title": "Contacto",
         "contact-subtitle": "Vamos trabalhar juntos?",
         "contact-desc": "Estou disponível para novas oportunidades e desafios em regime remoto.",
@@ -112,12 +106,12 @@ const translations = {
         "nav-education": "Education",
         "nav-contact": "Contact",
         "hero-title": "Filipe Joana",
-        "hero-subtitle": "Customer Support | Call Center | CRM | Virtual Assistant",
+        "hero-subtitle": "Customer Support | Call Center | Technical Customer Support | Virtual Assistant",
         "badge-remote": "Available for remote work",
         "badge-immediate": "Immediate start",
         "btn-contact": "Get In Touch",
         "profile-title": "Profile",
-        "profile-desc": "Customer Support and Call Center professional with experience in remote environments, CRM management, lead follow-up, and customer relationship development. Strong background in multichannel support (phone, email, and chat), sales conversion, and customer retention. Organized, results-driven, and experienced in digital tools for remote operations.",
+        "profile-desc": "Customer Support professional with experience supporting customers through email, chat, and phone, including remote environments. Experienced in customer communication, issue resolution, troubleshooting, and supporting day-to-day operations using digital tools. Currently studying Information Technology, developing practical knowledge in Linux, SSH, networking, and technical troubleshooting. Reliable, adaptable, and committed to providing clear, helpful support while continuously developing technical skills.",
         "profile-setup": "Fully equipped for remote work with stable internet connection, personal computer, and professional home office setup.",
         "experience-title": "Professional Experience",
         "remote": "Remote",
@@ -136,7 +130,6 @@ const translations = {
         "exp2-d5": "Remote administrative support for optimizing internal operations",
         "exp2-d6": "Coordination of schedules, reservations, and digital communication with clients",
         "exp2-d7": "Sales process support: creation of ads (OLX, Vinted)",
-        "exp2-d8": "Calendar management and client scheduling",
         "exp3-role": "Call Center Sales Representative",
         "exp3-d1": "Inbound and outbound call handling",
         "exp3-d2": "Consultative sales presentations",
@@ -166,7 +159,6 @@ const translations = {
         "s-support-11": "Research",
         "s-support-12": "Complaint Resolution",
         "s-support-13": "Customer Satisfaction",
-        "s-support-14": "Digital Products & Gaming Knowledge",
         "skills-cat-sales": "Sales & CRM",
         "s-sales-1": "CRM Management",
         "s-sales-2": "Pipedrive",
@@ -174,8 +166,6 @@ const translations = {
         "s-sales-4": "Lead Generation",
         "s-sales-5": "Lead Follow-up",
         "s-sales-6": "Sales Conversion",
-        "s-sales-7": "KPI Tracking",
-        "s-sales-8": "Performance Tracking",
         "s-sales-9": "Sales Support",
         "s-sales-10": "Order Processing",
         "s-sales-11": "Post-Sales Follow-up",
@@ -204,7 +194,7 @@ const translations = {
         "lang-ln": "Lingala",
         "lang-ln-level": "Fluent",
         "lang-en": "English",
-        "lang-en-level": "Basic - Currently Improving",
+        "lang-en-level": "English — Professional Working Proficiency",
         "contact-title": "Contact",
         "contact-subtitle": "Let's work together?",
         "contact-desc": "I am available for new opportunities and challenges in a remote regime.",
@@ -284,42 +274,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Typewriter effect for hero subtitle
-    const heroSubtitleEl = document.querySelector('[data-i18n="hero-subtitle"]');
-    let typeTimer = null;
-    function startTypewriter(text, el, speed = 35) {
-        if (!el) return;
-        if (typeTimer) { clearInterval(typeTimer); typeTimer = null; }
-        el.textContent = '';
-        el.classList.add('typing-cursor');
-        let i = 0;
-        typeTimer = setInterval(() => {
-            if (i < text.length) { el.textContent += text.charAt(i++); }
-            else { clearInterval(typeTimer); typeTimer = null; setTimeout(() => el.classList.remove('typing-cursor'), 700); }
-        }, speed);
-    }
-
-    if (heroSubtitleEl) startTypewriter(heroSubtitleEl.textContent, heroSubtitleEl);
-
-    // Restart typewriter on language change
-    langBtns.forEach(btn => btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        const text = (translations[lang] && translations[lang]['hero-subtitle']) ? translations[lang]['hero-subtitle'] : (heroSubtitleEl ? heroSubtitleEl.textContent : '');
-        setTimeout(() => startTypewriter(text, heroSubtitleEl), 50);
-    }));
-
-    // Delegate clicks for language buttons (resilient if buttons are re-rendered)
+    // Keep hero subtitle text stable to avoid duplication on each language toggle.
     document.addEventListener('click', (e) => {
         const btn = e.target.closest && e.target.closest('.lang-btn');
         if (!btn) return;
         const lang = btn.getAttribute('data-lang');
-        // Update active state
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         document.documentElement.lang = lang === 'pt' ? 'pt-PT' : 'en-US';
         applyTranslations(lang);
-        const text = (translations[lang] && translations[lang]['hero-subtitle']) ? translations[lang]['hero-subtitle'] : (heroSubtitleEl ? heroSubtitleEl.textContent : '');
-        setTimeout(() => startTypewriter(text, heroSubtitleEl), 50);
     });
 
     // Initialize translations on load using html lang or default to 'pt'
